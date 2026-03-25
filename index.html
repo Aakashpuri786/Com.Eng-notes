@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 11 Notes</title>
+    <!-- Include CDN for JSZip, FileSaver, Markdown parser, and FontAwesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1><i class="fa-solid fa-book-open"></i> Class 11 Notes</h1>
+            <p>Your one-stop destination for complete class 11 study materials</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Explorer Header containing breadcrumb and back button -->
+        <div class="explorer-header">
+            <button id="back-btn" class="btn btn-secondary" disabled>
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </button>
+            <div class="path-display" id="file-path">/root/</div>
+        </div>
+
+        <!-- Notification / Loading state -->
+        <div id="status-bar" class="hidden">Loading...</div>
+
+        <!-- Files and folders list -->
+        <div class="grid" id="file-grid">
+            <!-- Items injected by JS -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Developed by Aakash Puri</p>
+    </footer>
+
+    <!-- Preview Modal -->
+    <div id="preview-modal" class="modal">
+        <div class="modal-content preview-content">
+            <span class="close-btn" id="close-preview">&times;</span>
+            <h2 id="preview-title">File Preview</h2>
+            <div id="preview-body"></div>
+            <div class="modal-footer">
+                <button id="btn-download-preview" class="btn btn-primary"><i class="fa-solid fa-download"></i> Download</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirm Download Modal -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content confirm-content">
+            <span class="close-btn" id="close-confirm">&times;</span>
+            <h2>Confirm Download</h2>
+            <p id="confirm-text">Are you sure you want to download this item?</p>
+            <div class="modal-actions">
+                <button id="confirm-cancel" class="btn btn-secondary">Cancel</button>
+                <button id="confirm-yes" class="btn btn-primary">Yes, Download</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
