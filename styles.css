@@ -294,3 +294,70 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-blue);
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header-container h1 {
+        font-size: 1.8rem;
+    }
+    .header-container p {
+        font-size: 0.95rem;
+    }
+    .container {
+        padding: 1rem;
+    }
+    .explorer-header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+        gap: 10px;
+    }
+    .path-display {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .btn {
+        padding: 0.8rem 1rem; /* Better touch targets */
+        font-size: 1rem;
+    }
+    .grid {
+        grid-template-columns: 1fr; /* Full width cards on mobile */
+        gap: 1rem;
+    }
+    .card {
+        padding: 1.25rem;
+    }
+    
+    /* Modals for Mobile */
+    .modal-content {
+        width: 95%;
+        padding: 1.25rem;
+        margin: auto;
+    }
+    .preview-content {
+        height: 90vh;
+        max-height: 92vh;
+    }
+    #preview-body {
+        padding: 0.75rem;
+    }
+    .close-btn {
+        top: 10px;
+        right: 15px;
+        font-size: 2rem; 
+        padding: 5px;
+    }
+    .modal h2 {
+        font-size: 1.3rem;
+        margin-right: 2rem; /* Avoid overlap with close btn */
+        margin-bottom: 1rem;
+    }
+    .modal-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .modal-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
